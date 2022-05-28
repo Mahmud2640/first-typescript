@@ -11,6 +11,9 @@ const Counter = () => {
   const handleIncrease = (): void => {
     setCount(counter + 1);
   };
+  const handleDecrease = (): void => {
+    setCount(counter - 1);
+  };
 
   const handleUserSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -28,6 +31,7 @@ const Counter = () => {
       <h1>This is Counter</h1>
       <h2>{counter}</h2>
       <button onClick={handleIncrease}>Increase</button>
+      <button onClick={handleDecrease}>Decrease</button>
     </div>
   );
 };
